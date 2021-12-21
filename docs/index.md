@@ -139,7 +139,7 @@ Ansible — система управления конфигурациями, н
     ```
 
 !!! example "setup.py"
-    ``` yaml
+    ``` python
     import json
     from setuptools import setup, find_packages
     
