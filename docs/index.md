@@ -104,50 +104,52 @@ Ansible — система управления конфигурациями, н
 
 Манифест располагается в внутри проекта по пути `.github/workflows/ci.yml`.
 
-```
-name: ci # Задает имя конвейера
-on: # Задает когда необходимо запускать интеграцию, в данном примере сразу после внесения изменений в проект.
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-jobs: # Содержит список задач.
-  deploy: # Имя сценария задач. В процессе выполнения происходит создание структуры статического сайта со всеми страницами, и публикацией его в отдельной ветке проекта.
-    runs-on: ubuntu-latest # Выбираем среду для сборки, в данном случае используем docker контейнер.
-    strategy:
-      matrix:
-        python-version: [ 3.8 ]
-    if: github.event.repository.fork == false
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x64
-      - name: Install upgrade pip
-        run: python3 -m pip install --upgrade pip # Обновления пакетов python перед установкой зависимостей и сборкой статического сайта.
-      - name: Install Python dependencies
-        run: python3 -m pip install . # Запускается скрипт `setup.py` для установки зависимостей.
-      - run: python3 -m mkdocs gh-deploy --force # Запускает скрипт сборки статического сайта и копирования его в отдельную ветку проекта.
-```
+!!! example "ci.yml"
+    ``` yaml
+    name: ci # Задает имя конвейера
+    on: # Задает когда необходимо запускать интеграцию, в данном примере сразу после внесения изменений в проект.
+      push:
+        branches: [ main ]
+      pull_request:
+        branches: [ main ]
+    jobs: # Содержит список задач.
+      deploy: # Имя сценария задач. В процессе выполнения происходит создание структуры статического сайта со всеми страницами, и публикацией его в отдельной ветке проекта.
+        runs-on: ubuntu-latest # Выбираем среду для сборки, в данном случае используем docker контейнер.
+        strategy:
+          matrix:
+            python-version: [ 3.8 ]
+        if: github.event.repository.fork == false
+        steps:
+          - uses: actions/checkout@v2
+          - name: Set up Python ${{ matrix.python-version }}
+            uses: actions/setup-python@v2
+            with:
+              python-version: ${{ matrix.python-version }}
+              architecture: x64
+          - name: Install upgrade pip
+            run: python3 -m pip install --upgrade pip # Обновления пакетов python перед установкой зависимостей и сборкой статического сайта.
+          - name: Install Python dependencies
+            run: python3 -m pip install . # Запускается скрипт `setup.py` для установки зависимостей.
+          - run: python3 -m mkdocs gh-deploy --force # Запускает скрипт сборки статического сайта и копирования его в отдельную ветку проекта.
+    ```
 
-```
-import json
-from setuptools import setup, find_packages
-
-# Load list of dependencies
-with open("requirements.txt") as data:
-    install_requires = [
-        line for line in data.read().split("\n")
-        if line and not line.startswith("#")
-    ]
-
-# Package description
-setup(
-    install_requires = install_requires,
-)
-```
+!!! example "setup.py"
+    ``` yaml
+    import json
+    from setuptools import setup, find_packages
+    
+    # Load list of dependencies
+    with open("requirements.txt") as data:
+        install_requires = [
+            line for line in data.read().split("\n")
+            if line and not line.startswith("#")
+        ]
+    
+    # Package description
+    setup(
+        install_requires = install_requires,
+    )
+    ```
 
 Выше описан процесс интеграции, для процесса доставки используется функция GitHub Pages, которая просто использует ранее подготовленный сайт для подключения как виртуальный Web сервер.
 
@@ -155,36 +157,37 @@ setup(
 
 Манифест располагается в файле внутри проекта `.gitlab-ci.yml`.
 
-```
-stages: # Задает имя конвейера
-  - deploy
-
-deploy: # Задает имя списка задач.
-  stage: deploy
-  only: # Задает когда выполнять задачи, в данном примете сразу после внесения изменений в ветки проекта с названием main  или master.
-    - main
-    - master
-    - merge_requests
-  tags:
-    - mkdocs # Определяет где будут запущенны сценарии.
-  before_script:
-    - if [ ! -d $CI_PROJECT_DIR/docs/assets ];  then ln -s /var/mkdocs/templates/docs/assets/ $CI_PROJECT_DIR/docs/; fi
-    - if [ ! -d $CI_PROJECT_DIR/material ];  then ln -s /var/mkdocs/templates/material/ $CI_PROJECT_DIR/; fi
-    - VIRT_SITE_NAME=$(cat texdocs.yml | python /usr/local/lib/python3.6/site-packages/shyaml.py get-value site_description)
-  script:
-    - cd $CI_PROJECT_DIR && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d "/var/www/base/docs/$VIRT_SITE_NAME" # Запускает скрипт сборки статического сайта и копирования его в директорию с остальными сайтами на сервере.
-
-reconfig: # Задает имя списка задач.
-  stage: deploy
-  only: # Задает когда выполнять задачи, в данном примете сразу после внесения изменений в ветки проекта с названием main  или master.
-    - main
-    - master
-    - merge_requests
-  tags:
-    - mkdocs # Определяет где будут запущенны сценарии.
-  script:
-    - sudo ansible-playbook /var/mkdocs/new_docs/playbook.yml # Запускает сценарий обновления конфигурации Web сервера, после добавления нового сайта.
-```
+!!! example "gitlab-ci.yml"
+    ``` yaml
+    stages: # Задает имя конвейера
+      - deploy
+    
+    deploy: # Задает имя списка задач.
+      stage: deploy
+      only: # Задает когда выполнять задачи, в данном примете сразу после внесения изменений в ветки проекта с названием main  или master.
+        - main
+        - master
+        - merge_requests
+      tags:
+        - mkdocs # Определяет где будут запущенны сценарии.
+      before_script:
+        - if [ ! -d $CI_PROJECT_DIR/docs/assets ];  then ln -s /var/mkdocs/templates/docs/assets/ $CI_PROJECT_DIR/docs/; fi
+        - if [ ! -d $CI_PROJECT_DIR/material ];  then ln -s /var/mkdocs/templates/material/ $CI_PROJECT_DIR/; fi
+        - VIRT_SITE_NAME=$(cat texdocs.yml | python /usr/local/lib/python3.6/site-packages/shyaml.py get-value site_description)
+      script:
+        - cd $CI_PROJECT_DIR && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d "/var/www/base/docs/$VIRT_SITE_NAME" # Запускает скрипт сборки статического сайта и копирования его в директорию с остальными сайтами на сервере.
+    
+    reconfig: # Задает имя списка задач.
+      stage: deploy
+      only: # Задает когда выполнять задачи, в данном примете сразу после внесения изменений в ветки проекта с названием main  или master.
+        - main
+        - master
+        - merge_requests
+      tags:
+        - mkdocs # Определяет где будут запущенны сценарии.
+      script:
+        - sudo ansible-playbook /var/mkdocs/new_docs/playbook.yml # Запускает сценарий обновления конфигурации Web сервера, после добавления нового сайта.
+    ```
 
 В данном случае процесс интеграции происходит на целевом сервере, а интеграцию берет на себя специальный агент [GitLab Runner](https://docs.gitlab.com/runner/) запушенный на нем.
 
