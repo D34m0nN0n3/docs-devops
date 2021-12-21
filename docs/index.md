@@ -46,19 +46,21 @@ Ansible — система управления конфигурациями, н
 
 Пример установки и запуска службы Web сервера Nginx:
 
-```
-- name: Установка Nginx
-  package:
-    name: nginx
-    state: present
-
-- name: Активация и затуск службы Nginx
-  systemd:
-    name: nginx
-    state: started
-    enabled: yes
-    masked: no
-```
+!!! example "setup_nginx.yml"
+    ``` yaml
+    ---
+    - name: Установка Nginx
+      package:
+        name: nginx
+        state: present
+    
+    - name: Активация и затуск службы Nginx
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+        masked: no
+    ```
 
 ## DevOps
 
