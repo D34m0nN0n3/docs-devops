@@ -261,7 +261,7 @@ graph LR
 
     === "GitHub"
     
-        ```ymal
+        ``` ymal
         name: ansible-lint
         
         on: [push]
@@ -280,7 +280,7 @@ graph LR
     
     === "GitLab"
     
-        ```ymal
+        ``` ymal
         image: python:3-slim
         
         before_script:
