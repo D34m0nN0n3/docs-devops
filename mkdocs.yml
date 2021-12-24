@@ -31,14 +31,11 @@ plugins:
 
 extra_css:
   - assets/extra.css
-  - form/tabledynamic.css
 
 extra_javascript:
   - assets/extra.js
   - assets/mermaid.min.js
-  - assets/mermaid.core.js
   - assets/tex-mml-chtml.js
-  - form/tabledynamic.js
 
 theme:
   name: material
