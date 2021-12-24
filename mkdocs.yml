@@ -35,6 +35,7 @@ extra_css:
 
 extra_javascript:
   - assets/extra.js
+  - assets/mermaid.min.js
   - assets/tex-mml-chtml.js
   - form/tabledynamic.js
 
