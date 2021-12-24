@@ -21,6 +21,7 @@ plugins:
       style: margin-top:5px;margin-bottom:5px;margin-right:25px  
   - git-revision-date-localized
   - git-revision-date
+  - mermaid2
   - minify:
       minify_html: true
   - with-pdf:
