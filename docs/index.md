@@ -107,6 +107,17 @@ Ansible — система управления конфигурациями, н
 
 ``` mermaid
 graph TD
+I[Commit] --> A[Deploy]
+A[Deploy] --> B{Tests} --> C[DEV] --> D{Tests} --> E[TEST/QA] --> F{Tests} --> G[PROD] --> H{Tests}
+B -->|Error| K[Bad]
+D -->|Error| L[Bad]
+F -->|Error| M[Bad]
+H -->|Error| N[Back]
+N --> I
+```
+
+``` mermaid
+graph TD
 I[Фиксация изменений] --> A[Сборка]
 A[Сборка] --> B{Тесты} --> C[Развертывание в среде разработки] --> D{Тесты} --> E[Развертывание в тестовой среде] --> F{Тесты} --> G[Развертывание в продуктивной среде] --> H{Тесты}
 B -->|Сбой| K[Плохая сборка]
