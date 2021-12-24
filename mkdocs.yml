@@ -34,6 +34,7 @@ extra_javascript:
   - assets/extra.js
   - assets/mermaid.min.js
   - assets/tex-mml-chtml.js
+  - assets/extra-load.js
 
 theme:
   name: material
