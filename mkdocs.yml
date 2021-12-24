@@ -22,8 +22,6 @@ plugins:
   - git-revision-date-localized
   - git-revision-date
   - mermaid2
-  - minify:
-      minify_html: true
   - with-pdf:
       copyright: https://github.com/D34m0nN0n3
       cover_subtitle: ''

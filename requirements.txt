@@ -39,7 +39,6 @@ mkdocs-git-revision-date-localized-plugin
 mkdocs-markdownextradata-plugin
 mkdocs-mdpo-plugin
 mkdocs-mermaid2-plugin
-mkdocs-minify-plugin
 mkdocs-newsletter
 mkdocs-rss-plugin
 mkdocs-section-index
