@@ -162,6 +162,9 @@ Ansible — система управления конфигурациями, н
     )
     ```
 
+Работа конвейера:
+![Action](images/Actions-D34m0nN0n3_ansible-log4shell-find-and-![Action](images/Actions-D34m0nN0n3_ansible-log4shell-find-and-fix.png)![Action](images/Actions-D34m0nN0n3_ansible-log4shell-find-and-fix.png)
+
 Выше описан процесс интеграции, для процесса доставки используется функция GitHub Pages, которая просто использует ранее подготовленный сайт для подключения как виртуальный Web сервер.
 
 #### GitLab
