@@ -259,44 +259,44 @@ N --> A
 Отдельно существует статический анализ кода. **Статический анализ кода** - анализ программного обеспечения, производимый без реального выполнения исследуемых программ. Он проводится с целью проверки синтаксиса и обнаружения потенциально ненадежных частей кода (небезопасных функций или уязвимых библиотек).
 
 
-Пример статического анализа сценариев Ansible:
+!!! example "Пример статического анализа сценариев Ansible"
 
-=== "GitHub"
-
-    ``` ymal
-    name: ansible-lint
+    === "GitHub"
     
-    on: [push]
-    
-    jobs:
-      build:
-        runs-on: ubuntu-latest
+        ``` ymal
         name: ansible-lint
-        steps:
-          - uses: actions/checkout@master
-          - uses: actions/setup-python@v2
-          - run: pip install ansible ansible-lint
-          - run: ansible-lint --version
-          - run: ansible-lint .
-    ```
+        
+        on: [push]
+        
+        jobs:
+          build:
+            runs-on: ubuntu-latest
+            name: ansible-lint
+            steps:
+              - uses: actions/checkout@master
+              - uses: actions/setup-python@v2
+              - run: pip install ansible ansible-lint
+              - run: ansible-lint --version
+              - run: ansible-lint .
+        ```
 
-=== "GitLab"
-
-    ``` ymal
-    image: python:3-slim
+    === "GitLab"
     
-    before_script:
-      - pip install ansible ansible-lint
-      - ansible-lint --version
-    
-    stages:
-      - ansible-lint
-    
-    ansible-lint:
-      stage: ansible-lint
-      script:
-        - ansible-lint .
-    ```
+        ``` ymal
+        image: python:3-slim
+        
+        before_script:
+          - pip install ansible ansible-lint
+          - ansible-lint --version
+        
+        stages:
+          - ansible-lint
+        
+        ansible-lint:
+          stage: ansible-lint
+          script:
+            - ansible-lint .
+        ```
 
 ### Безопасность
 
