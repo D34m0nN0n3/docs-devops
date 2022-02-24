@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Dmitriy Prigoda" name="author"/>
+<link href="https://d34m0nn0n3.github.io/docs-devops/index.html" rel="canonical"/>
+<link href="assets/img/favicon/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-8.1.3" name="generator"/>
+<title>About DevOps</title>
+<link href="assets/stylesheets/main.c45fdb8e.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/palette.e6a45f82.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="assets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-BT11X31T69"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-BT11X31T69",{page_path:e.pathname})})})</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BT11X31T69"></script>
+</head>
+<body data-md-color-accent="red" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#методология-политика-и-стратегия-внесения-изменений">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="About DevOps" class="md-header__button md-logo" data-md-component="logo" href="index.html" title="About DevOps">
+<img alt="logo" src="assets/img/logo/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            About DevOps
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              DevOps
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="blue-grey" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="red" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<a aria-label="Поделиться" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"></path></svg>
+</a>
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="About DevOps" class="md-nav__button md-logo" data-md-component="logo" href="index.html" title="About DevOps">
+<img alt="logo" src="assets/img/logo/logo.svg"/>
+</a>
+    About DevOps
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          DevOps
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="index.html">
+        DevOps
+      </a>
+<nav aria-label="Содержание раздела" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#введение">
+    Введение
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#задача-и-подходы-к-ее-реализации">
+    Задача и подходы к ее реализации
+  </a>
+<nav aria-label="Задача и подходы к ее реализации" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#что-же-выбрать">
+    Что же выбрать?
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#контроль-версий">
+    Контроль версий
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#управление-конфигурацией">
+    Управление конфигурацией
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#devops">
+    DevOps
+  </a>
+<nav aria-label="DevOps" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#стратегия-автоматизации">
+    Стратегия автоматизации
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#основные-концепции">
+    Основные концепции
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#конвейеры-pipelines">
+    Конвейеры (Pipelines)
+  </a>
+<nav aria-label="Конвейеры (Pipelines)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github">
+    GitHub
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gitlab">
+    GitLab
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#автоматические-тесты">
+    Автоматические тесты
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#безопасность">
+    Безопасность
+  </a>
+<nav aria-label="Безопасность" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#devsecops">
+    DevSecOps
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#мониторинг">
+    Мониторинг
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#итог">
+    Итог
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="методология-политика-и-стратегия-внесения-изменений">Методология, политика и стратегия внесения изменений<a class="headerlink" href="#методология-политика-и-стратегия-внесения-изменений" title="Permanent link">¶</a></h1>
+<h2 id="введение">Введение<a class="headerlink" href="#введение" title="Permanent link">¶</a></h2>
+<p>Прежде всего необходимо понять задачу и определится со способами ее достижения. Естественным является для бизнеса получения конкурентного преимущества и извлечение максимальной прибыли. В современной экономике использование цифровых инструментов в бизнес-решениях играет определяющую роль. Вместе с ростом сложности высокотехнологичных платформ важным фактором становится бесперебойность работы критически важных ИТ-систем. Неизбежным становится внедрение и использование автоматизации.</p>
+<p><strong>Автоматизация</strong> — одно из направлений научно-технического прогресса, использующее саморегулирующие технические средства и математические методы с целью освобождения человека от участия в процессах получения, преобразования, передачи и использования энергии, материалов, изделий или информации, либо существенного уменьшения степени этого участия или трудоёмкости выполняемых операций. Основная тенденция развития систем автоматизации идет в направлении создания автоматических систем, которые способны выполнять заданные функции или процедуры без участия человека. Роль человека заключается в подготовке исходных данных, выборе алгоритма (метода решения) и анализе полученных результатов.</p>
+<h2 id="задача-и-подходы-к-ее-реализации">Задача и подходы к ее реализации<a class="headerlink" href="#задача-и-подходы-к-ее-реализации" title="Permanent link">¶</a></h2>
+<p><strong>Задача:</strong> повышение стабильности, ключевая цель для эксплуатации бизнес-решений. Для достижения ее чаше всего применяются два подхода.</p>
+<p><strong>Вариант 1:</strong> <br/>
+Минимизация изменений, имеет эффект накапливания "технического долга" в виде систем и приложений, отчаянно нуждавшихся в обновлении, которые все боятся касаться, опасаясь что-то сломать.</p>
+<p>Особенности:</p>
+<p>Системное администрирование и другие эксплутационные роли отделяются от таких областей, как разработка и управления проектами.</p>
+<ul>
+<li>
+<p>Разработчики продвигают продукт с новыми функциями и улучшениями.</p>
+</li>
+<li>
+<p>Эксплутационная группа обеспечивает непрерывное управление производственной средой.</p>
+</li>
+</ul>
+<p><strong>Вариант 2:</strong> <br/>
+Управление изменениями, это частое внесение изменений пока результат не будет соответствовать ожиданиям.
+Объединение разработчиков (программистов, аналитиков, владельцев приложения, менеджеров проекта) со специалистами службы эксплуатации (администраторами: безопасности, сетевыми, системными, баз данных и т.д.).</p>
+<p>Особенности:</p>
+<ul>
+<li>
+<p>Разработчики (Dev), специалисты службы эксплуатации (Ops) работают непрерывно. Несут равную ответственность за всю систему.</p>
+</li>
+<li>
+<p>Ни одно приложение или служба не должны выпускаться без тестирования.</p>
+</li>
+<li>
+<p>Все производственные среды зеркально отражаются в одинаковых средах разработки и тестирования.</p>
+</li>
+<li>
+<p>Члены команды Dev и Ops должны находится в непрерывном общении, как стратегических, так и эксплуатационных вопросов.</p>
+</li>
+</ul>
+<h3 id="что-же-выбрать">Что же выбрать?<a class="headerlink" href="#что-же-выбрать" title="Permanent link">¶</a></h3>
+<p>Так как цель одна, отличие только в подходе ее достижения, остается только выбрать нужный вариант. <em>"Куда двигаться: назад в пещеры или вперед в пещеры?"</em></p>
+<p>Оба подхода существуют давно. Первый преобладал долгое время и был широко распространен, под него проектировались как процессы, так и инфраструктура. Но современной тенденцией становится использование второго подхода. Частным случаем которого является применение методологии Continuous integration &amp; Continuous delivery. У нее есть особенности, определяющие её преимущества и недостатки.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Плюсы</th>
+<th align="left">Минусы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Минимальное время от запроса клиента до запуска в использование.</strong> Методология уменьшает время запуска обновлений до нескольких дней (в отдельных случаях, недель). Благодаря этому, разработчики получают возможность быстрее опробовать нововведения и внедрять решения быстрее.</td>
+<td align="left"><strong>Требования к опыту.</strong> В теории все корпоративные ИТ-системы можно перевести на CI/CD. Но на практике для получения результата нужен первичный опыт работы с методологией, а также правильная организация перестраивания всех процессов..</td>
+</tr>
+<tr>
+<td align="left"><strong>Возможность проверки версий.</strong> Оперативное тестирование и много итераций помогают разработчику быстро выявлять версии, не имеющие перспектив, еще на начальных этапах.</td>
+<td align="left"><strong>Сложность обеспечения взаимодействия.</strong> Непрерывное обновление и непрерывная поставка должны быть четко скоординированы, что возможно только после тщательной настройки взаимодействия между специалистами всех уровней.</td>
+</tr>
+<tr>
+<td align="left"><strong>Качество результата.</strong> Проведение автоматического тестирования помогает выявить ошибки и другие проблемы на самых ранних этапах разработки. При стандартном релизном подходе это сделать сложно или невозможно.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Для применения методологии необходимо разработать и внедрить следующие решения и процессы.</p>
+<h2 id="контроль-версий">Контроль версий<a class="headerlink" href="#контроль-версий" title="Permanent link">¶</a></h2>
+<p>Контроль версий, также известный как управление исходным кодом, — это практика отслеживания изменений программного кода и управления ими. <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8">Системы контроля версий</a> — это программные инструменты, помогающие командам разработчиков управлять изменениями в исходном коде с течением времени. Программное обеспечение контроля версий отслеживает все вносимые в код изменения в специальной базе данных. При обнаружении ошибки разработчики могут вернуться назад и выполнить сравнение с более ранними версиями кода для исправления ошибок, сводя к минимуму проблемы для всех участников команды. Наибольшее распространение сейчас получил протокол <code>git</code>, одним из продуктов реализующих его является GitLab.</p>
+<h2 id="управление-конфигурацией">Управление конфигурацией<a class="headerlink" href="#управление-конфигурацией" title="Permanent link">¶</a></h2>
+<p>Управление конфигурацией — это процесс учета изменений, вносимых в систему с целью сохранения ее целостности. Обычно используются инструменты и методы, способствующие автоматизации процесса и наблюдению состояния системы.</p>
+<p>Преимущества управления конфигурацией серверов состоят в способности определять вашу инфраструктуру как код. Это позволяет:</p>
+<ul>
+<li>
+<p>Использовать систему контроля версий для отслеживания любых изменений инфраструктуры;</p>
+</li>
+<li>
+<p>Повторно использовать скрипты конфигурирования для нескольких серверных сред, например для разработки, тестирования и производства;</p>
+</li>
+<li>
+<p>Упрощать процесс дублирования серверов для ускорения восстановления в случае сбоя системы.</p>
+</li>
+</ul>
+<p>Ansible — система управления конфигурациями, написанная на языке программирования Python, с использованием декларативного языка разметки для описания конфигураций. Используется для автоматизации настройки и развертывания программного обеспечения. Наряду с Chef, Puppet и SaltStack считается одной из наиболее популярных систем управления конфигурациями для Linux. Главное отличие Ansible от аналогов — не нужна установка агента/клиента на целевые системы.</p>
+<p>Пользователь Ansible создаёт определённые «плейбуки» (англ. playbook, play — игра, пьеса, book — книга) в формате YAML с описанием требуемых состояний управляемой системы. «Плейбук» — это описание состояния ресурсов системы, в котором она должна находиться в конкретный момент времени, включая установленные пакеты, запущенные службы, созданные файлы и многое другое.</p>
+<p>Пример установки и запуска службы Web сервера Nginx:</p>
+<div class="admonition example">
+<p class="admonition-title">setup_nginx.yml</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Установка Nginx</span><span class="w"></span>
+<span class="w">  </span><span class="nt">package</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span><span class="w"></span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Активация и затуск службы Nginx</span><span class="w"></span>
+<span class="w">  </span><span class="nt">systemd</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span><span class="w"></span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w"></span>
+<span class="w">    </span><span class="nt">masked</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">¶</a></h2>
+<p><img alt="DevOps" src="images/devops-process.png"/></p>
+<p>Это CLAMS (Culture - Культура, Lean - Рациональность, Automations - Автоматизация, Measurement - Измерение, Sharing - Совместная работа)</p>
+<ul>
+<li>
+<p>Культура: Все работают вместе, чтобы поддерживать общий бизнес-драйвер (цель, продукт) на всех этапах его жизненного цикла.</p>
+</li>
+<li>
+<p>Рациональность: Связь в реальном времени, и сосредоточенность на проблемах.</p>
+</li>
+<li>
+<p>Автоматизация: Два основных аспекта
+  а.  если задача выполняется более двух раз, ее следует автоматизировать;
+  б.  не автоматизируй то, чего не понимаешь.</p>
+</li>
+<li>
+<p>Измерение: Сбор метрик из сред окружения, для анализа аномалий и определения их причин. Метрики доступны и признаются все причастными.</p>
+</li>
+<li>
+<p>Совместная работа: Участие во всех процессах жизненного цикла проекта.</p>
+</li>
+</ul>
+<h3 id="стратегия-автоматизации">Стратегия автоматизации<a class="headerlink" href="#стратегия-автоматизации" title="Permanent link">¶</a></h3>
+<p>Элементы стратегии:</p>
+<ul>
+<li>
+<p>Автоматическая настройка новых узлов: установка и настройка ОС и всего необходимого ПО;</p>
+</li>
+<li>
+<p>Автоматическое управление конфигурацией: конфигурация должна храниться в одной базе и применяться ко всем узлам одного типа;</p>
+</li>
+<li>
+<p>Автоматическое продвижение кода: распространение нового функционала из среды разработки в тестовую среду и из тестовой в продуктивную. Тестирование автоматизированно;</p>
+</li>
+<li>
+<p>Систематическое обновление и исправление существующих узлов.</p>
+</li>
+</ul>
+<h3 id="основные-концепции">Основные концепции<a class="headerlink" href="#основные-концепции" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>Непрерывная интеграция (CI) - процесс совместной работы с общей кодовой базой, автоматизированного слияния разрозненных изменений в единую сборку в системе контроля версий, и ее тестированием. Результатом является получение "артефакта", упакованного программного обеспечения.</p>
+</li>
+<li>
+<p>Непрерывная доставка (CD) - процесс автоматизированного развертывания сборок в средах после завершения непрерывной интеграции. В результате происходит установка "артефакта" в серверную среду.</p>
+</li>
+</ul>
+<h3 id="конвейеры-pipelines">Конвейеры (Pipelines)<a class="headerlink" href="#конвейеры-pipelines" title="Permanent link">¶</a></h3>
+<p>Конвейер CI/CD представляет собой последовательность шагов, называемых этапами. Каждый этап - это по существу сценарий, выполняющий задачи, специфичные для ПО.</p>
+<p>Диаграмма конвейера CI/CD:</p>
+<pre class="mermaid"><code>graph TD
+A[Фиксация изменений] --&gt; B[Сборка]
+B[Сборка] --&gt; C{Тесты} --&gt; D[Развертывание в среде разработки] --&gt; E{Тесты} --&gt; F[Развертывание в тестовой среде] --&gt; G{Тесты} --&gt; H[Развертывание в продуктивной среде] --&gt; I{Тесты}
+C --&gt;|Сбой| K[Плохая сборка]
+E --&gt;|Сбой| L[Плохая сборка]
+G --&gt;|Сбой| M[Плохая сборка]
+I --&gt;|Сбой| N[Откат]
+N --&gt; A</code></pre>
+<p>Расмотрим два конвейера (Pipeline), для сборки статического сайта на примере mkdocs в GitHub и GitLab. Оба конвейера описываются в формате YAML манифестов с заранее определенным именем и расположением. У каждой системы CI/CD будет своя структура и синтаксис. В данных примерах не расматривается создание сценариев тестирования, так как результатом процессов являются статические данные.</p>
+<div class="admonition info">
+<p class="admonition-title">Для информации</p>
+<p>Описанное ниже является эквивалентом следующих операций: <br/>
+* Скопировать проект. Команда: <code>git clone &lt;url_project&gt;</code> <br/>
+* Собрать статический сайт. Команда: <code>mkdocs build -c -f texdocs.yml -d "/var/www/base/docs/&lt;site_name&gt;"</code> <br/>
+* Перезапустить сервис. Команда: <code>systemctl restart nginx.service</code> </p>
+</div>
+<h4 id="github">GitHub<a class="headerlink" href="#github" title="Permanent link">¶</a></h4>
+<p>Манифест располагается в внутри проекта по пути <code>.github/workflows/ci.yml</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">ci.yml</p>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># Задает имя конвейера</span><span class="w"></span>
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="c1"># Задает когда необходимо запускать интеграцию, в данном примере сразу после внесения изменений в проект.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">jobs</span><span class="p">:</span><span class="w"> </span><span class="c1"># Содержит список задач.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w"> </span><span class="c1"># Имя сценария задач. В процессе выполнения происходит создание структуры статического сайта со всеми страницами, и публикацией его в отдельной ветке проекта.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"> </span><span class="c1"># Выбираем среду для сборки, в данном случае используем docker контейнер.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">matrix</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">3.8</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event.repository.fork == false</span><span class="w"></span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python ${{ matrix.python-version }}</span><span class="w"></span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ matrix.python-version }}</span><span class="w"></span>
+<span class="w">          </span><span class="nt">architecture</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x64</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install upgrade pip</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m pip install --upgrade pip</span><span class="w"> </span><span class="c1"># Обновления пакетов python перед установкой зависимостей и сборкой статического сайта.</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Python dependencies</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m pip install .</span><span class="w"> </span><span class="c1"># Запускается скрипт `setup.py` для установки зависимостей.</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m mkdocs gh-deploy --force</span><span class="w"> </span><span class="c1"># Запускает скрипт сборки статического сайта и копирования его в отдельную ветку проекта.</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">setup.py</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">find_packages</span>
+
+<span class="c1"># Load list of dependencies</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"requirements.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">install_requires</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"#"</span><span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="c1"># Package description</span>
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">install_requires</span> <span class="o">=</span> <span class="n">install_requires</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Работа конвейера:
+<img alt="Action" src="images/Actions-D34m0nN0n3_ansible-log4shell-find-and-fix.png"/></p>
+<p>Выше описан процесс интеграции, для процесса доставки используется функция GitHub Pages, которая просто использует ранее подготовленный сайт для подключения как виртуальный Web сервер.</p>
+<h4 id="gitlab">GitLab<a class="headerlink" href="#gitlab" title="Permanent link">¶</a></h4>
+<p>Манифест располагается в файле внутри проекта <code>.gitlab-ci.yml</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">gitlab-ci.yml</p>
+<div class="highlight"><pre><span></span><code><span class="nt">stages</span><span class="p">:</span><span class="w"> </span><span class="c1"># Задает имя конвейера</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+
+<span class="nt">deploy</span><span class="p">:</span><span class="w"> </span><span class="c1"># Задает имя списка задач.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span><span class="w"> </span><span class="c1"># Задает когда выполнять задачи, в данном примете сразу после внесения изменений в ветки проекта с названием main  или master.</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">merge_requests</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs</span><span class="w"> </span><span class="c1"># Определяет где будут запущенны сценарии.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">before_script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">if [ ! -d $CI_PROJECT_DIR/docs/assets ];  then ln -s /var/mkdocs/templates/docs/assets/ $CI_PROJECT_DIR/docs/; fi</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">if [ ! -d $CI_PROJECT_DIR/material ];  then ln -s /var/mkdocs/templates/material/ $CI_PROJECT_DIR/; fi</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VIRT_SITE_NAME=$(cat texdocs.yml | python /usr/local/lib/python3.6/site-packages/shyaml.py get-value site_description)</span><span class="w"></span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd $CI_PROJECT_DIR &amp;&amp; sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d "/var/www/base/docs/$VIRT_SITE_NAME"</span><span class="w"> </span><span class="c1"># Запускает скрипт сборки статического сайта и копирования его в директорию с остальными сайтами на сервере.</span><span class="w"></span>
+
+<span class="nt">reconfig</span><span class="p">:</span><span class="w"> </span><span class="c1"># Задает имя списка задач.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span><span class="w"></span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span><span class="w"> </span><span class="c1"># Задает когда выполнять задачи, в данном примете сразу после внесения изменений в ветки проекта с названием main  или master.</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">merge_requests</span><span class="w"></span>
+<span class="w">  </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs</span><span class="w"> </span><span class="c1"># Определяет где будут запущенны сценарии.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sudo ansible-playbook /var/mkdocs/new_docs/playbook.yml</span><span class="w"> </span><span class="c1"># Запускает сценарий обновления конфигурации Web сервера, после добавления нового сайта.</span><span class="w"></span>
+</code></pre></div>
+</div>
+<p>Работа конвейера:
+<img alt="Jobs" src="images/Jobs-D34m0nN0n3_ansible-log4shell-find-and-fix.png"/></p>
+<p>В данном случае процесс интеграции происходит на целевом сервере, а интеграцию берет на себя специальный агент <a href="https://docs.gitlab.com/runner/">GitLab Runner</a> запушенный на нем.</p>
+<p>Конфиг фаил для GitLab Runner расположен в <code>/etc/gitlab-runner/config.toml</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">config.toml</p>
+<div class="highlight"><pre><span></span><code><span class="n">concurrent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="n">check_interval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="k">[session_server]</span><span class="w"></span>
+<span class="w">  </span><span class="n">session_timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1800</span><span class="w"></span>
+
+<span class="k">[[runners]]</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"documentation_ci"</span><span class="w"> </span><span class="c1"># Описание. Только для информации.</span><span class="w"></span>
+<span class="w">  </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"http://.../"</span><span class="w"> </span><span class="c1"># URL-адрес экземпляра GitLab.</span><span class="w"></span>
+<span class="w">  </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"..."</span><span class="w"> </span><span class="c1"># Токен аутентификации, который получается во время регистрации.</span><span class="w"></span>
+<span class="w">  </span><span class="n">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"shell"</span><span class="w"> </span><span class="c1"># Способ выполнения сценариев.</span><span class="w"></span>
+<span class="w">  </span><span class="n">builds_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/var/mkdocs/"</span><span class="w"></span>
+<span class="w">  </span><span class="k">[runners.custom_build_dir]</span><span class="w"></span>
+<span class="w">  </span><span class="k">[runners.cache]</span><span class="w"></span>
+<span class="w">    </span><span class="k">[runners.cache.s3]</span><span class="w"></span>
+<span class="w">    </span><span class="k">[runners.cache.gcs]</span><span class="w"></span>
+<span class="w">    </span><span class="k">[runners.cache.azure]</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h3 id="автоматические-тесты">Автоматические тесты<a class="headerlink" href="#автоматические-тесты" title="Permanent link">¶</a></h3>
+<p>Автоматические тесты - инструмент снижения издержек. Автотесты принято делить на три типа: модульные (юнит), сервисные и интеграционные (UI, браузерные, end‑to‑end, E2E) тесты.</p>
+<ul>
+<li>
+<p>Модульные тесты - проверяют работу отдельно взятых модулей — функций, классов, моделей, контроллеров — кирпичиков, из которых построено приложение. Модульные тесты выполняют проверки за миллисекунды, потому что тестируют модуль в отрыве от остального приложения.</p>
+</li>
+<li>
+<p>Интеграционные тесты - проверяют приложение целиком, когда все модули в сборе. Их задача — убедиться, что модули правильно соединены друг с другом. Кроме того, ими проверяют те части приложения, которые не имеют права сломаться: биллинг, регистрацию, оформление заказа. Интеграционные тесты длятся секунды, а иногда и минуты: запускаем приложение, загружаем его в браузер или эмулятор и «прокликиваем» сценарии.</p>
+</li>
+<li>
+<p>Сервисные тесты — среднее между интеграционными и модульными. Их задача — проверить функционал, который нельзя уверенно протестировать модульными тестами, а интеграционными тестировать «слишком жирно».</p>
+</li>
+</ul>
+<p>Отдельно существует статический анализ кода. <strong>Статический анализ кода</strong> - анализ программного обеспечения, производимый без реального выполнения исследуемых программ. Он проводится с целью проверки синтаксиса и обнаружения потенциально ненадежных частей кода (небезопасных функций или уязвимых библиотек).</p>
+<div class="admonition example">
+<p class="admonition-title">Пример статического анализа сценариев Ansible</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">GitHub</label><label for="__tabbed_1_2">GitLab</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>name: ansible-lint
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: ansible-lint
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v2
+      - run: pip install ansible ansible-lint
+      - run: ansible-lint --version
+      - run: ansible-lint .
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>image: python:3-slim
+
+before_script:
+  - pip install ansible ansible-lint
+  - ansible-lint --version
+
+stages:
+  - ansible-lint
+
+ansible-lint:
+  stage: ansible-lint
+  script:
+    - ansible-lint .
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+</div>
+<h3 id="безопасность">Безопасность<a class="headerlink" href="#безопасность" title="Permanent link">¶</a></h3>
+<p>Так как распределение процессов происходит централизованно из одной точки на основе маркеров. То необходимо предварительно настроить ограничения на всех узлах. К примеру, в разработке может происходить очистка всей среда вовремя сборки, что может привести к удалению данных в продуктивной среде по не осторожности. Или удалению данных в другом проекте, из-за указания неверного маркера. Для избежания подобных проблем настроить разрешение только необходимых операций в рамках конкретного проекта и среды.</p>
+<h4 id="devsecops">DevSecOps<a class="headerlink" href="#devsecops" title="Permanent link">¶</a></h4>
+<p><img alt="DevSecOps" src="images/devsecops-process.jpg"/></p>
+<p>DevSecOps — сокращенно от development, security и operations — автоматизирует интеграцию задач безопасности на всех этапах жизненного цикла разработки программного обеспечения, от проектирования до интеграции, тестирования, развертывания и доставки ПО. Является расширением процесса DevOps с ориентацией на безопасность. Позволяет решать проблемы безопасности по мере их появления, когда это можно сделать с меньшими затратами времени и средств (до развертывания функций в рабочей среде). Автоматизация тестирования позволяет включить зависимости ПО в подходящие уровни исправлений и удостовериться в том, что продукт успешно прошел этап модульного тестирования безопасности.</p>
+<p>Регулярные релизы и возможность быстро выпускать исправления ошибок стали новым стандартом для многих организаций, и ключевой частью их процессов является CI/CD-пайплайн. DevSecOps подчеркивает, что важно обеспечивать безопасность с самого начала, включая вопросы безопасности в культуру общего понимания и ответственности, а также встраивать проверки безопасности в автоматизированные тесты CI/CD-пайплайна. Как и в случае с операционной деятельностью, вместо того, чтобы внедрять требования и практики, связанные с безопасностью, уже после создания продукта, лучше выполнить сдвиг безопасности влево.</p>
+<h3 id="мониторинг">Мониторинг<a class="headerlink" href="#мониторинг" title="Permanent link">¶</a></h3>
+<p>В современных DevOps-архитектурах комплексного программного обеспечения существует множество данных, которые необходимо отслеживать. Больше недостаточно отслеживать только самые простые статистические данные, такие как RAM, CPU и дисковый I/O. Теперь ваше решение для мониторинга должно работать с API и передавать данные непосредственно с самих приложений. Для того, чтобы понять всю эту информацию, одним из критериев поиска нужной вам современной системы мониторинга должны стать возможности анализа в реальном времени потоковых данных, воспроизведения истории изменений и еще лучшие средства визуализации.</p>
+<p>Осуществление сложного мониторинга становится первой линией защиты от простоев. Таким образом, системы мониторинга должны постоянно развиваться, чтобы принимать во внимание все новые данные. Это приводит нас к очень важному вопросу. В чем разница между сервисами мониторинга старой школы и сервисами мониторинга готовыми к DevOps? Если вы ошибетесь в выборе инструментария для осуществления мониторинга, вы столкнетесь с частыми и продолжительными простоями.</p>
+<h2 id="итог">Итог<a class="headerlink" href="#итог" title="Permanent link">¶</a></h2>
+<p>Для управления жизненным циклом продуктов с использованием непрерывной интеграции и доставки, необходимо создание регламентов и процессов постоянного вынесения изменения в программный код. Написание сценариев всех операций от развертыванию и подготовки сред, до сборки и установки программного кода.</p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Последнее обновление:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 24, 2022</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            К началу
+          </a>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © <a href="https://github.com/D34m0nN0n3">Dmitriy Prigoda</a>.
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "search": "assets/javascripts/workers/search.efc77bfa.min.js"}</script>
+<script src="assets/javascripts/bundle.b89f2075.min.js"></script>
+<script src="assets/extra.js"></script>
+<script src="assets/mermaid.min.js"></script>
+<script src="assets/tex-mml-chtml.js"></script>
+<script src="assets/extra-load.js"></script>
+</body>
+</html>
